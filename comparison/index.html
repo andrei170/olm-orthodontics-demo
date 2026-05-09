@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olm Orthodontics &middot; Before vs After &middot; AG1 Consulting</title>
+<meta name="description" content="What Olm Orthodontics looks like in Google and AI search today versus what 90 days of search infrastructure could deliver. Audit, comparison, and 90-day plan.">
+<meta property="og:title" content="Olm Orthodontics &middot; Before vs After">
+<meta property="og:description" content="The 26-year specialist practice that AI search forgets. Here is what we'd fix in 90 days.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d1820;
+  --bg-elevated: #143038;
+  --bg-card: #1a3a44;
+  --teal: #204652;
+  --teal-light: #2d5d6c;
+  --purple: #5F497A;
+  --purple-light: #7a629a;
+  --gold: #B89968;
+  --gold-bright: #d6b681;
+  --cream: #FAF8F5;
+  --cream-dim: #c8c4bc;
+  --muted: #8a847c;
+  --line: rgba(184, 153, 104, 0.18);
+  --red: #c46a5a;
+  --green: #7ba578;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--cream); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E"); opacity: 0.025; pointer-events: none; z-index: 1; mix-blend-mode: overlay; }
+a { color: var(--cream); text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+.hero { padding: 120px 0 80px; text-align: center; position: relative; z-index: 2; }
+.hero::before { content: ''; position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 700px; height: 500px; background: radial-gradient(ellipse, rgba(95, 73, 122, 0.18), transparent 65%); filter: blur(60px); pointer-events: none; }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 24px; display: block; position: relative; z-index: 2; }
+.hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(48px, 7vw, 96px); line-height: 0.98; letter-spacing: -0.025em; max-width: 1000px; margin: 0 auto 32px; position: relative; z-index: 2; }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero p { color: var(--cream-dim); font-size: 18px; max-width: 660px; margin: 0 auto; position: relative; z-index: 2; }
+
+.section { padding: 80px 0; position: relative; z-index: 2; }
+.section-title { font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 4vw, 56px); letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 16px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.section-sub { color: var(--cream-dim); font-size: 17px; margin-bottom: 56px; max-width: 680px; }
+
+/* Compare cards */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 80px; }
+.compare-card { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--bg-card); transition: transform 0.3s, border-color 0.3s; }
+.compare-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.compare-label { padding: 16px 24px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+.compare-label.current { background: rgba(196, 106, 90, 0.12); color: var(--red); border-bottom: 1px solid rgba(196, 106, 90, 0.3); }
+.compare-label.new { background: rgba(184, 153, 104, 0.12); color: var(--gold); border-bottom: 1px solid var(--line); }
+.compare-preview { aspect-ratio: 16/10; background: var(--bg-elevated); position: relative; overflow: hidden; }
+.compare-preview-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; padding: 32px; text-align: center; background-size: cover; background-position: center; }
+.compare-preview-fallback::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,24,32,0.5), rgba(13,24,32,0.88)); }
+.compare-preview-fallback > * { position: relative; z-index: 2; }
+.compare-preview-fallback h3 { font-family: var(--serif); font-size: 32px; font-weight: 500; letter-spacing: -0.01em; }
+.compare-body { padding: 28px 32px; }
+.compare-body h4 { font-family: var(--serif); font-size: 24px; font-weight: 500; margin-bottom: 8px; letter-spacing: -0.01em; }
+.compare-body p { color: var(--cream-dim); font-size: 14px; margin-bottom: 20px; }
+.compare-body ul { list-style: none; margin-bottom: 24px; }
+.compare-body li { padding: 6px 0; font-size: 14px; color: var(--cream-dim); display: flex; align-items: flex-start; gap: 10px; }
+.compare-body li::before { font-size: 12px; margin-top: 2px; flex-shrink: 0; }
+.current li::before { content: '\2717'; color: var(--red); font-weight: 700; }
+.new li::before { content: '\2713'; color: var(--green); font-weight: 700; }
+.compare-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 4px; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; }
+.cta-current { border: 1px solid rgba(196, 106, 90, 0.4); color: var(--red); }
+.cta-current:hover { background: rgba(196, 106, 90, 0.1); }
+.cta-new { background: var(--gold); color: var(--bg); }
+.cta-new:hover { background: var(--gold-bright); }
+
+/* AI search bombshell */
+.bombshell-section { background: var(--bg-elevated); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.bombshell-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: center; }
+.bombshell-stat { font-family: var(--serif); font-size: clamp(80px, 14vw, 200px); font-weight: 500; line-height: 1; color: var(--gold); letter-spacing: -0.03em; }
+.bombshell-stat em { font-style: italic; }
+.bombshell-stat-label { font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 16px; }
+.bombshell-content h2 { font-family: var(--serif); font-size: clamp(32px, 4vw, 56px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 24px; }
+.bombshell-content h2 em { font-style: italic; color: var(--gold); }
+.bombshell-content p { color: var(--cream-dim); font-size: 17px; line-height: 1.7; margin-bottom: 16px; }
+.queries-list { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
+.query-item { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 12px 0; font-size: 14px; color: var(--cream-dim); border-bottom: 1px solid rgba(184, 153, 104, 0.06); }
+.query-item:last-child { border-bottom: none; }
+.query-x { color: var(--red); font-weight: 700; font-size: 16px; flex-shrink: 0; }
+
+/* Specialist gap section */
+.specialist-section { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%); position: relative; overflow: hidden; }
+.specialist-section::before { content: ''; position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(95, 73, 122, 0.12), transparent 70%); filter: blur(40px); }
+.specialist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; margin-top: 40px; }
+.specialist-card { padding: 48px 40px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; position: relative; }
+.specialist-card.spec::before { content: 'SPECIALIST'; position: absolute; top: 24px; right: 24px; font-size: 10px; letter-spacing: 0.22em; color: var(--gold); padding: 4px 10px; border: 1px solid rgba(184, 153, 104, 0.4); border-radius: 100px; background: rgba(184, 153, 104, 0.08); font-weight: 600; }
+.specialist-card.gen::before { content: 'GENERAL DENTIST'; position: absolute; top: 24px; right: 24px; font-size: 10px; letter-spacing: 0.22em; color: var(--purple-light); padding: 4px 10px; border: 1px solid rgba(122, 98, 154, 0.4); border-radius: 100px; background: rgba(122, 98, 154, 0.08); font-weight: 600; }
+.specialist-card h3 { font-family: var(--serif); font-size: 28px; font-weight: 500; margin-bottom: 8px; letter-spacing: -0.01em; }
+.specialist-card .strategy-sub { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--cream-dim); margin-bottom: 24px; }
+.specialist-card ul { list-style: none; }
+.specialist-card li { color: var(--cream-dim); font-size: 14px; padding: 6px 0; padding-left: 24px; position: relative; }
+.specialist-card li::before { content: '\2731'; color: var(--gold); position: absolute; left: 0; top: 6px; font-size: 11px; }
+
+/* Plan summary */
+.plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.plan-card { padding: 32px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 6px; transition: all 0.3s; position: relative; }
+.plan-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.plan-num { font-family: var(--serif); font-size: 13px; font-style: italic; color: var(--gold); margin-bottom: 16px; display: block; }
+.plan-card h4 { font-family: var(--serif); font-size: 24px; font-weight: 500; line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.01em; }
+.plan-card p { color: var(--cream-dim); font-size: 14px; line-height: 1.6; }
+.plan-week { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple-light); margin-top: 16px; display: inline-block; }
+
+/* Scorecard */
+.scorecard { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--bg-card); }
+.scorecard-header { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 24px 32px; background: var(--bg-elevated); border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+.scorecard-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 18px 32px; border-bottom: 1px solid var(--line); align-items: center; }
+.scorecard-row:last-child { border-bottom: none; }
+.scorecard-row:hover { background: rgba(184, 153, 104, 0.03); }
+.scorecard-label { font-size: 15px; color: var(--cream); }
+.scorecard-cell { font-size: 14px; }
+.scorecard-cell.current { color: var(--red); }
+.scorecard-cell.new { color: var(--green); font-weight: 500; }
+
+.cta-section { padding: 120px 0; text-align: center; position: relative; z-index: 2; }
+.cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(184, 153, 104, 0.10), transparent 60%); }
+.cta-section h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); font-weight: 500; letter-spacing: -0.025em; margin-bottom: 24px; line-height: 1.05; }
+.cta-section h2 em { font-style: italic; color: var(--gold); }
+.cta-section p { color: var(--cream-dim); font-size: 17px; margin-bottom: 40px; max-width: 540px; margin-left: auto; margin-right: auto; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 18px 36px; border-radius: 4px; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.25s; }
+.cta-button.primary { background: var(--gold); color: var(--bg); }
+.cta-button.primary:hover { background: var(--gold-bright); transform: translateY(-2px); }
+.cta-button.ghost { border: 1px solid var(--line); color: var(--cream); }
+.cta-button.ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+footer { padding: 32px 0; border-top: 1px solid var(--line); text-align: center; font-size: 12px; color: var(--muted); position: relative; z-index: 2; }
+
+@media (max-width: 1024px) {
+  .compare-grid, .specialist-grid { grid-template-columns: 1fr; }
+  .bombshell-grid { grid-template-columns: 1fr; gap: 32px; }
+  .plan-grid { grid-template-columns: 1fr 1fr; }
+  .scorecard-header, .scorecard-row { grid-template-columns: 2fr 1fr 1fr; padding: 14px 20px; }
+}
+@media (max-width: 720px) {
+  .plan-grid { grid-template-columns: 1fr; }
+  .specialist-card.spec::before, .specialist-card.gen::before { position: static; display: inline-block; margin-bottom: 16px; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Prepared for Dr. Brett Olm &middot; AG1 Consulting</span>
+    <h1>26 years of <em>specialist</em> work.<br>And AI search has never <em>heard</em> of you.</h1>
+    <p>What olmortho.com looks like to Google and ChatGPT today versus what it could look like in 90 days, with full schema, AI search visibility, and the specialist credential finally doing the work it earned.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Olm Orthodontics: <em>before vs after</em></h2>
+    <p class="section-sub">Same Dr. Olm. Same Marquette MS in Orthodontics. Same Red Bird Circle office. Two very different chances of being found by the parents searching tonight.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label current">Today &middot; Live Site</div>
+        <div class="compare-preview">
+          <div class="compare-preview-fallback" style="background: linear-gradient(135deg, rgba(13,24,32,0.7), rgba(13,24,32,0.92)), url('../photos/dr-olm.webp') center 25%/cover; filter: saturate(0.55);">
+            <h3>olmortho.com</h3>
+            <p style="color: var(--cream-dim); font-size: 14px;">Currently live &middot; Click to view</p>
+          </div>
+        </div>
+        <div class="compare-body current">
+          <h4>What's there now</h4>
+          <p>The current site holds the basics but lacks the search infrastructure that lets Google and AI engines actually surface your specialist work in 2026.</p>
+          <ul>
+            <li>No JSON-LD schema (no MedicalBusiness, no MedicalProcedure, no Person markup for Dr. Olm)</li>
+            <li>No meta description (Google search results show the wrong snippet)</li>
+            <li>No Open Graph image (broken social previews on Facebook, LinkedIn, iMessage)</li>
+            <li>No FAQ schema (AI engines have nothing to lift verbatim)</li>
+            <li>No service-deep landing pages for "Invisalign De Pere" or "teen Invisalign Green Bay"</li>
+            <li>The Marquette MS and AAO specialist credential is buried, not headlined</li>
+            <li>Invisible across 6 of 6 AI question queries we tested</li>
+          </ul>
+          <a href="https://www.olmortho.com/" target="_blank" rel="noopener" class="compare-cta cta-current">View Live Site &rarr;</a>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="compare-label new">Proposed &middot; A+ Rebuild</div>
+        <div class="compare-preview">
+          <div class="compare-preview-fallback" style="background: linear-gradient(135deg, rgba(184,153,104,0.18) 0%, rgba(32,70,82,0.55) 50%, rgba(13,24,32,0.92) 100%), url('../photos/dr-olm.webp') center 25%/cover;">
+            <h3>Olm Orthodontics, reimagined</h3>
+            <p style="color: var(--cream-dim); font-size: 14px;">Click to explore the new design &rarr;</p>
+          </div>
+        </div>
+        <div class="compare-body new">
+          <h4>What we'd ship</h4>
+          <p>A premium teal-and-gold rebuild built for Google AI search, AEO citation pickup, and a positioning that finally makes the specialist credential the reason to book.</p>
+          <ul>
+            <li>Full Person + MedicalBusiness + MedicalProcedure + FAQ + AggregateRating schema</li>
+            <li>Real Open Graph previews and meta descriptions for every page</li>
+            <li>8 service-deep landing pages including the Specialist vs General Dentist positioning page</li>
+            <li>Citation campaign: Healthgrades feature, US News, TrustAnalytica, Doctors Network, Wikipedia entry</li>
+            <li>Review-velocity automation (target 8 to 12 new Google reviews per month vs. ~1 today)</li>
+            <li>Specialist credential strip and free-consultation CTA above the fold</li>
+            <li>Performance gate: Google local pack for "orthodontist De Pere" by day 60, or work continues at no additional cost</li>
+          </ul>
+          <a href="../" class="compare-cta cta-new">Open the Demo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bombshell-section">
+  <div class="container">
+    <div class="bombshell-grid">
+      <div>
+        <div class="bombshell-stat"><em>0</em><span style="font-size: 0.5em; opacity: 0.6">/6</span></div>
+        <div class="bombshell-stat-label">AI Engine Recommendations</div>
+      </div>
+      <div class="bombshell-content">
+        <h2>You're not in the <em>answer.</em></h2>
+        <p>We asked ChatGPT, Perplexity, and Google's AI Overview the six question-style queries a Brown County parent or adult patient actually types. Across all six, Olm Orthodontics came up zero times.</p>
+        <p>The patients who need a real specialist, not a general dentist with a weekend Invisalign certification, are getting OSGB. They're getting Wilke. They're getting Engage. They're getting Ledgeview Dental. They are not getting you.</p>
+        <div class="queries-list">
+          <div class="query-item"><span>Where can I find the best Invisalign provider in De Pere?</span><span class="query-x">&times;</span></div>
+          <div class="query-item"><span>How do I choose an orthodontist for my child in Green Bay?</span><span class="query-x">&times;</span></div>
+          <div class="query-item"><span>Which orthodontist near De Pere has the best reviews?</span><span class="query-x">&times;</span></div>
+          <div class="query-item"><span>How much do braces cost in Green Bay?</span><span class="query-x">&times;</span></div>
+          <div class="query-item"><span>Should I get Invisalign or braces as an adult in Wisconsin?</span><span class="query-x">&times;</span></div>
+          <div class="query-item"><span>Free orthodontic consultation in De Pere?</span><span class="query-x">&times;</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section specialist-section">
+  <div class="container">
+    <h2 class="section-title">The angle nobody is using: <em>specialist</em> vs general dentist.</h2>
+    <p class="section-sub">Of the 18+ providers offering Invisalign in Brown County search results, only three are board-certified specialists with a Master of Science in Orthodontics. The other 15 are general dentists offering aligners on the side. They appear in the same search results. They're positioned as equivalents. They shouldn't be.</p>
+
+    <div class="specialist-grid">
+      <div class="specialist-card spec">
+        <h3>Dr. Brett Olm, DDS, MS</h3>
+        <p class="strategy-sub">The credential the website doesn't tell anyone about.</p>
+        <ul>
+          <li>Marquette University Master of Science in Orthodontics, 2000</li>
+          <li>2-year orthodontic residency post-DDS, treating thousands of cases</li>
+          <li>26 years in De Pere practice, treating children, teens, adults</li>
+          <li>American Association of Orthodontists board membership</li>
+          <li>iTero 3D scanning, full diagnostic imaging on-site</li>
+          <li>This is what AI search engines reward, when they can read it</li>
+        </ul>
+      </div>
+      <div class="specialist-card gen">
+        <h3>The Invisalign side-service</h3>
+        <p class="strategy-sub">Most of the De Pere search competition.</p>
+        <ul>
+          <li>General DDS, no orthodontic residency</li>
+          <li>Invisalign certification weekend course</li>
+          <li>Cases referred out when they get complex</li>
+          <li>Same Google search result as a specialist today</li>
+          <li>Out-ranking actual specialists on specialist queries</li>
+          <li>Because their websites are wired for search and yours isn't</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The <em>90-day</em> plan.</h2>
+    <p class="section-sub">Four phases. Each one compounds on the last. By day 90, Olm Orthodontics is appearing in AI answers, ranking on Google for the high-volume keywords every parent types, and converting consultation bookings at a rate the practice has never had before.</p>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <span class="plan-num">&mdash; Phase 01</span>
+        <h4>Foundation</h4>
+        <p>Schema deploy (Person, MedicalBusiness, MedicalProcedure, FAQ, AggregateRating), meta descriptions, Open Graph, GBP optimization, review-velocity SMS automation.</p>
+        <span class="plan-week">Weeks 1&ndash;2</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">&mdash; Phase 02</span>
+        <h4>Citations</h4>
+        <p>Healthgrades feature submission, US News full profile, TrustAnalytica clear-braces ranking, Doctors Network Invisalign De Pere page, Wikipedia entry for Dr. Olm and the practice.</p>
+        <span class="plan-week">Weeks 3&ndash;6</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">&mdash; Phase 03</span>
+        <h4>Content</h4>
+        <p>Eight service-deep landing pages (Invisalign De Pere, Invisalign cost, teen Invisalign, braces for kids, two-phase, adult orthodontics, specialist vs general dentist), FAQ schema content blocks throughout.</p>
+        <span class="plan-week">Weeks 4&ndash;8</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">&mdash; Phase 04</span>
+        <h4>Reputation Flywheel</h4>
+        <p>Post-appointment SMS review automation, monthly content cadence, monthly performance dashboard tracking rankings, GBP impressions, consultation bookings, attributed new starts.</p>
+        <span class="plan-week">Weeks 6&ndash;12</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The <em>scorecard.</em></h2>
+    <p class="section-sub">Every signal Google and AI search engines check, the current olmortho.com graded against the 90-day rebuild.</p>
+
+    <div class="scorecard">
+      <div class="scorecard-header">
+        <div>Signal</div>
+        <div>Today</div>
+        <div>After rebuild</div>
+      </div>
+      <div class="scorecard-row"><div class="scorecard-label">Person + MedicalBusiness schema</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Full</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">MedicalProcedure schema (Invisalign, Braces)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Yes</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">FAQPage schema (AI search lift)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; 6+ questions</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">AggregateRating schema (review stars in SERP)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Live widget</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Meta description</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Hand-crafted per page</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Open Graph image (social previews)</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Optimized</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Service-deep landing pages</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; 8 pages</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Specialist credential surfaced as positioning</div><div class="scorecard-cell current">&times; Buried</div><div class="scorecard-cell new">&check; Hero strip</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">AI engine recommendation rate</div><div class="scorecard-cell current">0 of 6</div><div class="scorecard-cell new">5 of 6 (target)</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Citation list inclusions</div><div class="scorecard-cell current">3</div><div class="scorecard-cell new">12+</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Monthly Google reviews collected</div><div class="scorecard-cell current">~1</div><div class="scorecard-cell new">8 to 12</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Design tier</div><div class="scorecard-cell current">B&minus;</div><div class="scorecard-cell new">A+</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>The parents searching tonight<br>can't <em>find</em> you.</h2>
+    <p>Ninety days from now, they will. Let's talk.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@andreicopy.net" class="cta-button primary">Book the Strategy Call &rarr;</a>
+      <a href="../" class="cta-button ghost">Open the Demo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>AG1 Consulting &middot; Andrei Givero &middot; info@andreicopy.net &middot; <a href="https://andrei170.github.io/ag1/" style="color: var(--gold);">andrei170.github.io/ag1</a></span>
+</footer>
+
+</body>
+</html>
