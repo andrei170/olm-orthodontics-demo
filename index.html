@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olm Orthodontics. Top-Rated Invisalign + Braces in De Pere & Green Bay</title>
+  <meta name="description" content="Dr. Brett Olm has been straightening smiles in De Pere and Green Bay for over 25 years. Invisalign, clear braces, and traditional braces for kids, teens, and adults. Free consultation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #204652;
+      --teal-dark: #143038;
+      --purple: #5F497A;
+      --lavender: #E5E0EC;
+      --cream: #FAF8F5;
+      --gold: #B89968;
+      --ink: #1A1A1A;
+      --ink-soft: #4A4A4A;
+      --line: #E8E4DC;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(32, 70, 82, 0.97); backdrop-filter: blur(8px);
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand {
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px; font-weight: 600; letter-spacing: 0.5px;
+    }
+    .brand span { color: var(--gold); }
+    .nav-links {
+      display: flex; gap: 32px;
+      font-size: 14px; font-weight: 500;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85); transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .cta-btn {
+      background: var(--gold); color: var(--white);
+      padding: 12px 24px; border-radius: 4px;
+      font-size: 14px; font-weight: 600; letter-spacing: 0.5px;
+      text-transform: uppercase; transition: all 0.2s;
+      border: 1px solid var(--gold);
+      display: inline-block;
+    }
+    .cta-btn:hover { background: transparent; color: var(--gold); }
+    .cta-btn-dark {
+      background: var(--teal); color: var(--white); border-color: var(--teal);
+    }
+    .cta-btn-dark:hover { background: transparent; color: var(--teal); }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* Hero */
+    .hero {
+      padding: 96px 0 80px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 0; right: 0;
+      width: 50%; height: 100%;
+      background: radial-gradient(circle at top right, var(--purple) 0%, transparent 60%);
+      opacity: 0.3;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center;
+      position: relative;
+    }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .hero-eyebrow {
+      font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(40px, 5vw, 64px); line-height: 1.1;
+      margin-bottom: 24px; letter-spacing: -0.5px;
+    }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+    .hero-sub {
+      font-size: 18px; color: rgba(255,255,255,0.85);
+      margin-bottom: 36px; max-width: 540px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .hero-phone { color: rgba(255,255,255,0.9); font-size: 14px; }
+    .hero-phone strong { color: var(--white); font-size: 16px; display: block; }
+    .hero-image {
+      position: relative; border-radius: 8px; overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+    }
+    .hero-image img {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover;
+    }
+    .hero-badge {
+      position: absolute; bottom: 24px; left: 24px;
+      background: var(--white); padding: 12px 20px; border-radius: 4px;
+      display: flex; align-items: center; gap: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .hero-badge img { width: 48px; height: 48px; }
+    .hero-badge-text { font-size: 12px; color: var(--ink); line-height: 1.3; }
+    .hero-badge-text strong { display: block; font-size: 14px; color: var(--teal); }
+
+    /* Trust Strip */
+    .trust {
+      background: var(--white); padding: 32px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+      text-align: center;
+    }
+    @media (max-width: 768px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+    .trust-item .num {
+      font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600;
+      color: var(--teal); display: block; line-height: 1;
+    }
+    .trust-item .lbl {
+      font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--ink-soft); margin-top: 6px;
+    }
+
+    /* Services */
+    section { padding: 96px 0; }
+    .section-header { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+    .section-eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(32px, 4vw, 48px); line-height: 1.15; color: var(--teal);
+      margin-bottom: 16px; letter-spacing: -0.5px;
+    }
+    .section-sub { font-size: 17px; color: var(--ink-soft); }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+    .service {
+      background: var(--white); padding: 40px 32px; border-radius: 8px;
+      border: 1px solid var(--line); transition: all 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .service::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: var(--gold); transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .service:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .service:hover::before { transform: scaleX(1); }
+    .service-tag {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .service h3 {
+      font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500;
+      color: var(--teal); margin-bottom: 12px;
+    }
+    .service-price {
+      font-size: 14px; color: var(--ink-soft); margin-bottom: 16px;
+    }
+    .service-price strong { color: var(--teal); font-size: 16px; }
+    .service p { color: var(--ink-soft); font-size: 15px; margin-bottom: 24px; }
+    .service ul { list-style: none; margin-bottom: 28px; }
+    .service li {
+      font-size: 14px; color: var(--ink-soft); padding-left: 24px;
+      position: relative; margin-bottom: 8px;
+    }
+    .service li::before {
+      content: '✓'; position: absolute; left: 0; top: 0;
+      color: var(--gold); font-weight: 700;
+    }
+    .service-cta {
+      font-size: 13px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--teal);
+      border-bottom: 2px solid var(--teal); padding-bottom: 4px;
+    }
+
+    /* Doctor */
+    .doctor { background: var(--lavender); }
+    .doctor-grid {
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: center;
+    }
+    @media (max-width: 900px) { .doctor-grid { grid-template-columns: 1fr; } }
+    .doctor-image {
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 16px 40px rgba(32, 70, 82, 0.15);
+    }
+    .doctor-image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+    .doctor h2 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(32px, 4vw, 44px); line-height: 1.15; color: var(--teal);
+      margin-bottom: 16px; letter-spacing: -0.5px;
+    }
+    .doctor-credentials {
+      font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--purple); margin-bottom: 24px; font-weight: 600;
+    }
+    .doctor p { font-size: 16px; color: var(--ink-soft); margin-bottom: 16px; }
+    .doctor-quote {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 22px; color: var(--teal); padding: 24px 0;
+      border-top: 1px solid rgba(32, 70, 82, 0.15);
+      border-bottom: 1px solid rgba(32, 70, 82, 0.15);
+      margin: 32px 0;
+    }
+
+    /* Process */
+    .process-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+    }
+    @media (max-width: 900px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .process-grid { grid-template-columns: 1fr; } }
+    .step {
+      text-align: center; padding: 24px;
+    }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--teal); color: var(--white);
+      font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .step h4 {
+      font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500;
+      color: var(--teal); margin-bottom: 12px;
+    }
+    .step p { font-size: 14px; color: var(--ink-soft); }
+
+    /* Testimonials */
+    .testimonials { background: var(--white); }
+    .test-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    }
+    @media (max-width: 900px) { .test-grid { grid-template-columns: 1fr; } }
+    .test {
+      padding: 32px; border: 1px solid var(--line); border-radius: 8px;
+      background: var(--cream);
+    }
+    .stars { color: var(--gold); font-size: 18px; margin-bottom: 16px; letter-spacing: 2px; }
+    .test-quote {
+      font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic;
+      color: var(--ink); margin-bottom: 24px; line-height: 1.5;
+    }
+    .test-author { font-size: 14px; color: var(--ink-soft); }
+    .test-author strong { color: var(--teal); display: block; font-size: 15px; font-style: normal; }
+
+    /* Final CTA */
+    .final-cta {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--purple) 100%);
+      color: var(--white); text-align: center; padding: 96px 0;
+    }
+    .final-cta h2 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(36px, 5vw, 56px); line-height: 1.1;
+      margin-bottom: 16px; letter-spacing: -0.5px;
+    }
+    .final-cta p {
+      font-size: 18px; color: rgba(255,255,255,0.85);
+      max-width: 600px; margin: 0 auto 40px;
+    }
+    .final-actions {
+      display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+      align-items: center;
+    }
+    .phone-large {
+      font-family: 'Cormorant Garamond', serif; font-size: 32px;
+      color: var(--white); display: flex; align-items: center; gap: 12px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--teal-dark); color: rgba(255,255,255,0.7);
+      padding: 64px 0 32px;
+    }
+    .foot-grid {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 540px) { .foot-grid { grid-template-columns: 1fr; } }
+    footer h5 {
+      color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 16px; font-weight: 600;
+    }
+    footer ul { list-style: none; }
+    footer li { margin-bottom: 8px; font-size: 14px; }
+    .foot-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      font-size: 13px;
+    }
+    .foot-brand {
+      font-family: 'Cormorant Garamond', serif; font-size: 24px;
+      color: var(--white); margin-bottom: 16px; font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="brand">Olm <span>Orthodontics</span></a>
+    <nav class="nav-links">
+      <a href="#services">Treatments</a>
+      <a href="#doctor">Dr. Olm</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <a href="#contact" class="cta-btn">Free Consult</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow">De Pere · Green Bay · Since 2000</div>
+      <h1>Straighter smiles. <em>Quietly confident.</em> For 25 years and counting.</h1>
+      <p class="hero-sub">Dr. Brett Olm has straightened more than 8,000 De Pere and Green Bay smiles. Invisalign, clear braces, and traditional braces for children, teens, and adults. Same calm, no-pressure approach since 2000.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="cta-btn">Book Free Exam</a>
+        <div class="hero-phone">Or call us<br><strong>920.964.0144</strong></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="photos/dr-olm.webp" alt="Dr. Brett Olm, Olm Orthodontics, De Pere WI">
+      <div class="hero-badge">
+        <img src="photos/invisalign-badge.webp" alt="Invisalign Provider">
+        <div class="hero-badge-text">
+          <strong>Certified Invisalign Provider</strong>
+          Top 1% in Northeast Wisconsin
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <span class="num">25+</span>
+      <div class="lbl">Years in De Pere</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">8,000+</span>
+      <div class="lbl">Smiles Straightened</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">Marquette</span>
+      <div class="lbl">DDS &amp; MS, 2000</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">5.0</span>
+      <div class="lbl">Google &amp; Healthgrades</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Treatments</div>
+      <h2 class="section-title">Three paths to a confident smile.</h2>
+      <p class="section-sub">Every plan is mapped during your free consultation. No surprise pricing. No high-pressure tactics. Just the option that fits your life.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-tag">Most Popular</div>
+        <h3>Invisalign Clear Aligners</h3>
+        <div class="service-price"><strong>From $4,800</strong> · 12-18 months typical</div>
+        <p>Removable, virtually invisible aligners. Eat what you want. Brush normally. Show up to weddings without metal in your mouth.</p>
+        <ul>
+          <li>iTero 3D digital scanning, no goopy molds</li>
+          <li>Top 1% Invisalign provider in Northeast WI</li>
+          <li>Same-day check-ins with Dr. Olm</li>
+          <li>Flexible financing &amp; insurance coordination</li>
+        </ul>
+        <a href="#contact" class="service-cta">Book Free Invisalign Exam →</a>
+      </div>
+
+      <div class="service">
+        <div class="service-tag">Discreet Option</div>
+        <h3>Clear Ceramic Braces</h3>
+        <div class="service-price"><strong>From $5,200</strong> · 18-24 months typical</div>
+        <p>Tooth-colored brackets. Stronger correction than Invisalign for complex cases. Perfect for teens and adults who can't remove aligners reliably.</p>
+        <ul>
+          <li>Stain-resistant ceramic brackets</li>
+          <li>Self-ligating system, fewer adjustments</li>
+          <li>Works on cases Invisalign can't</li>
+          <li>Treatment plan locked at consultation</li>
+        </ul>
+        <a href="#contact" class="service-cta">Discuss Clear Braces →</a>
+      </div>
+
+      <div class="service">
+        <div class="service-tag">Best for Kids &amp; Teens</div>
+        <h3>Traditional Metal Braces</h3>
+        <div class="service-price"><strong>From $4,200</strong> · 18-30 months typical</div>
+        <p>The proven gold standard. Best results on growing teeth, complex bites, and big movements. Custom color bands kids actually look forward to.</p>
+        <ul>
+          <li>Smaller, smoother brackets than 10 years ago</li>
+          <li>Phase 1 treatment for ages 7-10</li>
+          <li>Color-change appointments every 6 weeks</li>
+          <li>Works with all dental insurance plans</li>
+        </ul>
+        <a href="#contact" class="service-cta">Book Kids' Free Exam →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="doctor" class="doctor">
+  <div class="container doctor-grid">
+    <div class="doctor-image">
+      <img src="photos/dr-olm.webp" alt="Dr. Brett Olm, Marquette-trained orthodontist, De Pere WI">
+    </div>
+    <div>
+      <div class="section-eyebrow">Meet Your Orthodontist</div>
+      <h2>Dr. Brett Olm. Marquette-trained. De Pere-based. 8,000 smiles in.</h2>
+      <div class="doctor-credentials">DDS, MS · Marquette '97 + '00 · 25+ years in practice</div>
+      <p>Brett Olm opened Olm Orthodontics in 2000, six years after finishing his Doctor of Dental Surgery at Marquette and earning his Master's in Orthodontics from the same school. Twenty-five years later, he's still the only orthodontist who works on every case at Olm Orthodontics. No rotating associates. No transferred files. Just one doctor who knows your mouth from day one.</p>
+      <div class="doctor-quote">"Orthodontic care is about more than straight teeth. It's about giving someone a reason to keep smiling for the next 50 years."</div>
+      <p><strong>Memberships:</strong> American Association of Orthodontists, American Dental Association, Wisconsin Dental Association.</p>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">How It Works</div>
+      <h2 class="section-title">From "should I do this?" to a confident smile.</h2>
+      <p class="section-sub">Most patients book their free exam, walk in three weeks later for treatment, and are smiling differently inside a month.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Free Consultation</h4>
+        <p>45-minute exam with Dr. Olm. iTero 3D scan. Treatment plan, timeline, and exact price walked through with you.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Personalized Plan</h4>
+        <p>You choose: Invisalign, clear braces, or metal. We coordinate with your dental insurance and explain financing options.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Treatment Begins</h4>
+        <p>Aligners delivered or brackets placed. Quick check-ins every 6-8 weeks. Most appointments are under 20 minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Confident Smile</h4>
+        <p>Final reveal. Custom retainers. Lifetime check-back program so the work we did today lasts the next 30 years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Reviews</div>
+      <h2 class="section-title">8,000 patients. 25 years. 5.0 stars.</h2>
+      <p class="section-sub">Real reviews from De Pere, Green Bay, Suamico, and Howard families.</p>
+    </div>
+
+    <div class="test-grid">
+      <div class="test">
+        <div class="stars">★★★★★</div>
+        <div class="test-quote">"Dr. Olm walked our daughter through every step. She's 11 and was scared. By the second visit she was asking when she could come back. Worth every penny."</div>
+        <div class="test-author">
+          <strong>The Henderson family</strong>
+          De Pere, WI · Phase 1 braces
+        </div>
+      </div>
+      <div class="test">
+        <div class="stars">★★★★★</div>
+        <div class="test-quote">"I was 38 when I started Invisalign here. The plan, the price, the timeline. Exactly what was promised. Six months ahead of schedule. Cannot recommend enough."</div>
+        <div class="test-author">
+          <strong>M. Krueger</strong>
+          Green Bay, WI · Invisalign
+        </div>
+      </div>
+      <div class="test">
+        <div class="stars">★★★★★</div>
+        <div class="test-quote">"Two of our four kids have done braces with Dr. Olm. Will be three soon. The whole staff knows our family. That's not a thing you find anymore."</div>
+        <div class="test-author">
+          <strong>The Vanden Heuvels</strong>
+          Suamico, WI · Multi-child families
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="final-cta">
+  <div class="container">
+    <h2>Book your free 45-minute exam.</h2>
+    <p>iTero 3D scan, treatment plan, and exact pricing. Walk in with questions. Walk out with a clear path. No deposits, no pressure.</p>
+    <div class="final-actions">
+      <a href="tel:9209640144" class="cta-btn">Book Online</a>
+      <div class="phone-large">📞 920.964.0144</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Olm Orthodontics</div>
+        <p style="font-size: 14px; line-height: 1.6;">Family orthodontics in De Pere since 2000. Invisalign, clear braces, and traditional braces for children, teens, and adults.</p>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li>548 Red Bird Cir</li>
+          <li>De Pere, WI 54115</li>
+          <li><br></li>
+          <li>Mon-Fri 8a-5p</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:9209640144">920.964.0144</a></li>
+          <li>info@olmortho.com</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Treatments</h5>
+        <ul>
+          <li><a href="#services">Invisalign</a></li>
+          <li><a href="#services">Clear Braces</a></li>
+          <li><a href="#services">Metal Braces</a></li>
+          <li><a href="#services">Phase 1 (Kids)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Olm Orthodontics. All rights reserved.</div>
+      <div>Demo by AG1 Consulting · andrei170.github.io/olm-orthodontics-demo/</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
